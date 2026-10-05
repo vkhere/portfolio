@@ -28,7 +28,6 @@ This is the personal portfolio website for **Vinay Kumar**, a seasoned IT Infras
 | **Companies**    | TCS (Jan 2020 - Aug 2024), Accenture (Oct 2024 - Oct 2025) |
 | **Location**     | Noida, Uttar Pradesh, India                      |
 | **Email**        | vinayhereon@gmail.com                            |
-| **Phone**        | +91 7210784141                                   |
 
 ## 🗂 Project Structure
 

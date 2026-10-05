@@ -254,7 +254,6 @@ AIQUM / SANnav:    65%  (9 months)
 | Interaction                     | Behavior                                          |
 |---------------------------------|---------------------------------------------------|
 | Click email card                | Opens mail client (mailto:)                        |
-| Click phone card                | Opens dialer (tel:) on mobile                     |
 | Fill form + Submit              | 1.5s simulated send → green success message       |
 | Submit with empty fields        | Red error "Please fill in all fields"              |
 | Submit with invalid email       | Red error "Please enter a valid email address"    |

@@ -184,10 +184,9 @@ vercel
 ## Customization Quick Reference
 
 ### Update Contact Details
-Edit `index.html` - search for `vinayhereon@gmail.com` or `7210784141`:
+Edit `index.html` - search for `vinayhereon@gmail.com`:
 ```html
 <a href="mailto:vinayhereon@gmail.com">vinayhereon@gmail.com</a>
-<a href="tel:+917210784141">+91 7210784141</a>
 ```
 
 ### Update Hero Stats
