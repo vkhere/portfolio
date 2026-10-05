@@ -411,8 +411,7 @@ img { max-width: 100%; }
 .scroll-down {
   position: absolute;
   bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -421,6 +420,8 @@ img { max-width: 100%; }
   font-size: 0.75rem;
   cursor: pointer;
   animation: bounce 2s infinite;
+  z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
 .scroll-mouse {
@@ -445,8 +446,8 @@ img { max-width: 100%; }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(-8px); }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 
 /* ══════════════════ ABOUT ═════════════════════════════════ */
@@ -1125,4 +1126,5 @@ img { max-width: 100%; }
   .hero-cta { flex-direction: column; align-items: center; }
   .stat-divider { display: none; }
   .hero-stats { gap: 1.5rem; }
+  .scroll-down { right: 1rem; bottom: 1.25rem; }
 }
