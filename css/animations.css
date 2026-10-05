@@ -1,0 +1,103 @@
+/* ──────────────────────────────────────────────────────────
+   animations.css - Additional keyframe animations & effects
+   ────────────────────────────────────────────────────────── */
+
+/* Particle floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+/* Shimmer on skill bars */
+@keyframes shimmer {
+  0%   { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+/* Card pulse glow */
+@keyframes card-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,212,255,0.1); }
+  50%       { box-shadow: 0 0 30px rgba(0,212,255,0.3); }
+}
+
+/* Page section reveal */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0 0 0);
+    transform: translateY(0);
+  }
+}
+
+/* Loading skeleton */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+/* Neon border pulse */
+@keyframes neon-pulse {
+  0%, 100% { border-color: rgba(0,212,255,0.3); }
+  50%       { border-color: rgba(0,212,255,0.8); }
+}
+
+/* Stars twinkling */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 1; transform: scale(1.3); }
+}
+
+/* Text gradient shift */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ripple for button */
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* Hero name glow */
+.hero-name {
+  animation: fadeInUp 0.8s ease 0.1s forwards, gradient-shift 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Floating project cards */
+.project-card:nth-child(odd) {
+  animation: float 6s ease-in-out infinite;
+}
+.project-card:nth-child(even) {
+  animation: float 6s ease-in-out infinite 3s;
+}
+
+/* Award card neon border on hover */
+.award-card:hover {
+  animation: neon-pulse 1.5s ease infinite;
+}
+
+/* Cert card shimmer top border */
+.cert-card::before {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Skill bars shimmer after fill */
+.skill-bar-fill.filled::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 40px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.skill-bar-fill { position: relative; }
